@@ -11,7 +11,7 @@
 
 ## 👋 What is this?
 
-Welcome to the official project showcase for **Mentor Me Collective's Grow with Google track**. This is where our Scholars' Grow with Google projects live on — not tucked away in a private folder, but out in the open for future cohorts, mentors, and the broader community to explore, learn from, and **build on top of**.
+Welcome to the official project showcase for **Mentor Me Collective's Grow with Google Program**. This is where our Scholars' Grow with Google projects live on — not tucked away in a private folder, but out in the open for future cohorts, mentors, and the broader community to explore, learn from, and **build on top of**.
 
 Think of it less like a submission dropbox and more like a **living library of what MMC Scholars can do** with the skills, tools, and certifications from Grow with Google. 🌱✨
 
