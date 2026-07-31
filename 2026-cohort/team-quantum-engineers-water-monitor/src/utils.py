@@ -4,9 +4,10 @@ Core data processing functions for AquaWatch Naija
 """
 
 import os
+from functools import lru_cache
+
 import numpy as np
 import pandas as pd
-import streamlit as st
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -78,7 +79,7 @@ def classify_risk(row):
 # LOAD DATA
 # -------------------------------------------------
 
-@st.cache_data
+@lru_cache(maxsize=1)
 def load_data(csv_file):
 
     csv_path = os.path.join(BASE_DIR, csv_file)
