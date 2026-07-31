@@ -68,7 +68,7 @@ AquaWatch Naija directly supports **UN SDG 6: Clean Water and Sanitation** by:
 * **Language:** Python
 * **Framework:** Streamlit (interactive dashboard/web app)
 * **Data Processing:** Pandas-based cleaning, aggregation, and standardization pipeline
-* **Data Sources:** Kaggle water pollution dataset (Nigeria subset: South, Central, East, North, West), plus two peer-reviewed academic case studies covering Abuja (FCT) and Benue South (see [Research & Data](#research-data) for full citations)
+* **Data Sources:** Kaggle dataset plus two peer-reviewed academic case studies (see [Research & Data](#research-data) for full details)
 
 ---
 
@@ -91,8 +91,8 @@ The team collectively drew on the following Grow with Google Career Certificates
 **Data Sources:**
 
 * [Water Pollution and Disease dataset (Kaggle)](https://www.kaggle.com/datasets/khushikyad001/water-pollution-and-disease) by Khushi Yadav. Filtered to Nigeria-only records.
-* Adejuwon, E. O., Ogwueleka, T. C., Ogungbemi, E. O., Prabhu, R., Rendon-Nava, A., and Yates, K. (2025). Assessment of Surface Water Quality Using Chemometric Tools: A Case Study of Jabi Lake, Abuja, Nigeria. Iranian Journal of Science and Technology, Transactions of Civil Engineering, 49, 829-852.
-* Edegbene, A. O., Yandev, D., Omotehinwa, T. O., Zakaria, H., and Andy, B. O. (2025). Water quality assessment in Benue South, Nigeria: An investigation of physico-chemical and microbial characteristics. Water Science, 39(1), 279-290.
+* Adejuwon, E. O., Ogwueleka, T. C., Ogungbemi, E. O., Prabhu, R., Rendon-Nava, A., and Yates, K. (2025). Assessment of Surface Water Quality Using Chemometric Tools: A Case Study of Jabi Lake, Abuja, Nigeria. Iranian Journal of Science and Technology, Transactions of Civil Engineering, 49, 829 to 852.
+* Edegbene, A. O., Yandev, D., Omotehinwa, T. O., Zakaria, H., and Andy, B. O. (2025). Water quality assessment in Benue South, Nigeria: An investigation of physico-chemical and microbial characteristics. Water Science, 39(1), 279 to 290.
 
 **Methodology:**
 
@@ -159,7 +159,7 @@ streamlit run app.py
 
 **Resources:**
 
-* **Data:** Kaggle water pollution dataset (Nigeria subset: South, Central, East, North, West), plus two peer-reviewed academic case studies covering Abuja (FCT) and Benue South (see [Research & Data](#research-data))
+* **Data:** Kaggle dataset plus two peer-reviewed academic case studies (see [Research & Data](#research-data) for full details)
 * **Tools:** Python, Streamlit, Pandas, NumPy
 * **Team:** Five cross-functional Scholars collaborating together throughout, including joint working sessions for planning and development
 
