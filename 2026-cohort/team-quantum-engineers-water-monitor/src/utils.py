@@ -3,9 +3,12 @@ utils.py
 Core data processing functions for AquaWatch Naija
 """
 
+import os
 import numpy as np
 import pandas as pd
 import streamlit as st
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # -------------------------------------------------
 # WHO SAFETY THRESHOLDS
@@ -78,7 +81,8 @@ def classify_risk(row):
 @st.cache_data
 def load_data(csv_file):
 
-    df = pd.read_csv(csv_file)
+    csv_path = os.path.join(BASE_DIR, csv_file)
+    df = pd.read_csv(csv_path)
 
     df[["Risk Level", "Risk Reason"]] = df.apply(
         classify_risk,
