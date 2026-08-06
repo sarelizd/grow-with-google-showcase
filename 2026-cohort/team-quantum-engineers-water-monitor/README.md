@@ -80,7 +80,7 @@ Every test site plotted and color-coded by risk level across Nigeria.
 <td width="50%">
 
 **Map Tooltip (Safe Reading):**
-Hovering a point on the Water Safety Map surfaces the year, region, water source, and reason.
+Hovering a point on the Water Safety Map shows the year, region, water source, risk level, and reason.
 
 ![Water Safety Map tooltip showing a Safe reading](./docs/map-tooltip-safe.png)
 
