@@ -17,15 +17,16 @@
 
 1. [What AquaWatch Naija Does (and Why It Matters)](#what-it-does)
 2. [Key Features](#key-features)
-3. [Alignment with SDG 6](#sdg-alignment)
-4. [Tech Stack](#tech-stack)
-5. [Grow with Google Resources Used](#grow-with-google-resources)
-6. [Research & Data](#research-data)
-7. [Setup & Run Instructions](#setup-instructions)
-8. [Video Walkthrough](#video-walkthrough)
-9. [Implementation Plan](#implementation-plan)
-10. [Future Ideas](#future-ideas)
-11. [License](#license)
+3. [Screenshots](#screenshots)
+4. [Alignment with SDG 6](#sdg-alignment)
+5. [Tech Stack](#tech-stack)
+6. [Grow with Google Resources Used](#grow-with-google-resources)
+7. [Research & Data](#research-data)
+8. [Live App & Setup Instructions](#setup-instructions)
+9. [Video Walkthrough](#video-walkthrough)
+10. [Implementation Plan](#implementation-plan)
+11. [Future Ideas](#future-ideas)
+12. [License](#license)
 
 ---
 
@@ -44,10 +45,79 @@
 
 | Feature | Description |
 |---|---|
-| **Interactive Dashboard** | Visualizes municipal water testing results in an accessible, non-technical format |
-| **Year-Tagged Records** | Every test result is tagged by year, laying the groundwork for future trend analysis across testing periods |
-| **Contamination Threshold Alerts** | Highlights when key safety indicators cross public health thresholds |
-| **Data Standardization Pipeline** | Cleans and aggregates data from disparate municipal sources into one consistent schema |
+| **Interactive Dashboard** | Visualizes municipal water testing results in an accessible, non-technical format, with sidebar filters by Region and Water Source Type. |
+| **Color-Coded Safety Map** | An interactive map plots every test site and color-codes it Green (Safe), Orange (Moderate Risk), or Red (High Risk); hovering a point shows the year, region, water source, risk level, and reason. |
+| **Year-Tagged Records** | The Kaggle dataset and regional case studies include municipal water testing results from 2000-2024. Every test result is tagged by year, and the year is surfaced throughout the dashboard. The year is indicated in the first column in both data tables, in the map's hover tooltip, and in the Community Action Steps guidance, so users always know how current a reading is. |
+| **Contamination Threshold Alerts** | Highlights when key safety indicators (pH, turbidity, bacteria count, contaminant level) cross public health thresholds, with dedicated Safe / Moderate Risk / High Risk banners. |
+| **Disease Indicator / Risk Column** | Surfaces the original field-recorded public health notes where available, and otherwise names whichever disease (Cholera, Typhoid, or Diarrheal) has the highest reported incidence for that record. |
+| **Data Standardization Pipeline** | Cleans and aggregates data from disparate municipal sources into one consistent schema. |
+
+---
+
+<a name="screenshots"></a>
+## 📸 Screenshots
+
+<table>
+<tr>
+<td width="50%">
+
+**Dashboard Overview:**
+Live summary metrics and Safe / Moderate Risk / High Risk status banners.
+
+![AquaWatch Naija dashboard overview showing summary metrics and safety status banners](./docs/dashboard-overview.png)
+
+</td>
+<td width="50%">
+
+**Water Safety Map:**
+Every test site plotted and color-coded by risk level across Nigeria.
+
+![Water Safety Map showing color-coded test sites across Nigeria](./docs/water-safety-map.png)
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**Map Tooltip (Safe Reading):**
+Hovering a point on the Water Safety Map surfaces the year, region, water source, and reason.
+
+![Water Safety Map tooltip showing a Safe reading](./docs/map-tooltip-safe.png)
+
+</td>
+<td width="50%">
+
+**Map Tooltip (High Risk Reading):**
+The same tooltip on a High Risk point, showing the breach reason.
+
+![Water Safety Map tooltip showing a High Risk reading](./docs/map-tooltip-high-risk.png)
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**Water Safety Status by Region:**
+Risk counts and results table filtered to a specific region and water source.
+
+![Water Safety Status by Region table filtered to West region and River source](./docs/water-safety-status-by-region.png)
+
+</td>
+<td width="50%">
+
+**Municipal Water Testing Results:**
+Full results with Risk Level, Risk Reason, and Disease Indicator columns.
+
+![Municipal Water Testing Results table showing risk level, risk reason, and disease indicator columns](./docs/municipal-water-testing-results.png)
+
+</td>
+</tr>
+</table>
+
+**Community Action Steps:**
+Guided next steps for residents, based on the currently filtered Risk Level.
+
+![Community Action Steps showing three guided steps for residents](./docs/community-action-steps.png)
 
 ---
 
@@ -67,7 +137,10 @@ AquaWatch Naija directly supports **UN SDG 6: Clean Water and Sanitation** by:
 
 * **Language:** Python
 * **Framework:** Streamlit (interactive dashboard/web app)
-* **Data Processing:** Pandas-based cleaning, aggregation, and standardization pipeline
+* **Mapping:** pydeck (interactive, color-coded map of test sites)
+* **Styling:** Custom CSS, embedded directly in `app.py`, for the dashboard's glassmorphism-style visual design
+* **Data Processing:** Pandas and NumPy-based cleaning, aggregation, and standardization pipeline
+* **Deployment:** Streamlit Community Cloud
 * **Data Sources:** Kaggle dataset plus two peer-reviewed academic case studies (see [Research & Data](#research-data) for full details)
 
 ---
@@ -83,6 +156,8 @@ The team collectively drew on the following Grow with Google Career Certificates
 * Google Cybersecurity Professional Certificate
 * Google Digital Marketing & E-commerce Professional Certificate
 
+**Applied Skills:** Python automation powered the data cleaning and pipeline. Data analytics and visualization shaped the Streamlit dashboard, including the risk classification logic, color-coded map, and summary metrics.
+
 ---
 
 <a name="research-data"></a>
@@ -91,29 +166,38 @@ The team collectively drew on the following Grow with Google Career Certificates
 **Data Sources:**
 
 * [Water Pollution and Disease dataset (Kaggle)](https://www.kaggle.com/datasets/khushikyad001/water-pollution-and-disease) by Khushi Yadav. Filtered to Nigeria-only records.
-* Adejuwon, E. O., Ogwueleka, T. C., Ogungbemi, E. O., Prabhu, R., Rendon-Nava, A., and Yates, K. (2025). Assessment of Surface Water Quality Using Chemometric Tools: A Case Study of Jabi Lake, Abuja, Nigeria. Iranian Journal of Science and Technology, Transactions of Civil Engineering, 49, 829-852.
-* Edegbene, A. O., Yandev, D., Omotehinwa, T. O., Zakaria, H., and Andy, B. O. (2025). Water quality assessment in Benue South, Nigeria: An investigation of physico-chemical and microbial characteristics. Water Science, 39(1), 279-290.
+* Adejuwon, E. O., Ogwueleka, T. C., Ogungbemi, E. O., Prabhu, R., Rendon-Nava, A., and Yates, K. (2025). [Assessment of Surface Water Quality Using Chemometric Tools: A Case Study of Jabi Lake, Abuja, Nigeria](https://doi.org/10.1007/s40996-024-01712-2). Iranian Journal of Science and Technology, Transactions of Civil Engineering, 49, 829-852.
+* Edegbene, A. O., Yandev, D., Omotehinwa, T. O., Zakaria, H., and Andy, B. O. (2025). [Water quality assessment in Benue South, Nigeria: An investigation of physico-chemical and microbial characteristics](https://doi.org/10.1080/23570008.2025.2483013). Water Science, 39(1), 279-290.
 
-**Methodology:**
+### Methodology
 
 This project combines a national dataset with two peer-reviewed regional case studies to build a hyperlocal, Nigeria-specific water quality picture.
 
-1. The Kaggle dataset (3,000 records across multiple countries) was filtered down to Nigeria-only records, producing an initial Nigeria dataset covering the regions South, Central, East, North, and West.
-2. Water quality measurements from the two peer-reviewed case studies were extracted and standardized into a matching format:
-   - The Jabi Lake study contributed the **Abuja (FCT)** region.
-   - The Benue South study contributed the **Benue South** region.
+* The Kaggle dataset (3,000 records across multiple countries) was filtered down to Nigeria-only records, producing an initial Nigeria dataset covering the regions South, Central, East, North, and West.
+* Water quality measurements from the two peer-reviewed case studies were extracted and standardized into a matching format:
+  * The Jabi Lake study contributed the **Abuja (FCT)** data.
+  * The Benue South study contributed data for the **Benue South Senatorial District**, drawing on water sources across three Local Government Areas (LGAs) within Benue State, Nigeria: **Otukpo, Ohimini, and Apa**.
 
-   Note: "South" (from the Kaggle dataset) and "Benue South" (from the Benue South paper) are two distinct regions from two different sources. They are not the same and are kept separate in the dataset.
-3. The Nigeria-filtered Kaggle data and the two case-study datasets were merged into a single finalized dataset, which powers the dashboard.
+  > **Note:** Benue South is not the same as the broad "South" region from the Kaggle dataset, which spans multiple, unrelated parts of the country. "South" and "Benue South" are two distinct regions from two different sources and are kept separate throughout the dataset and the dashboard.
+
+The Nigeria-filtered Kaggle data and the two case-study datasets were merged into a single finalized dataset (`nigeria_combined_water_data.csv`), which powers the dashboard.
 
 Data cleaning, metric standardization, and exploratory data analysis were used throughout to isolate key contamination thresholds and safety indicators for public consumption.
 
 ---
 
 <a name="setup-instructions"></a>
-## 🚀 Setup & Run Instructions
+## 🚀 Live App & Setup Instructions
 
-To clone the repository and run the project locally:
+### Option A: Use the live app (no setup required)
+
+👉 **[team-quantum-engineers-water-monitor.streamlit.app](https://team-quantum-engineers-water-monitor.streamlit.app/)**
+
+This is the fastest way to explore the dashboard. Filter by region and water source, view the safety map, and browse the full testing results table, all in your browser.
+
+### Option B: Run it locally
+
+Running locally is useful if you want to read or modify the code, rather than just view the dashboard.
 
 ```bash
 # Clone the repository
@@ -125,15 +209,21 @@ cd 2026-cohort/team-quantum-engineers-water-monitor
 # Check out our team's working branch
 git checkout team-quantum-engineers
 
-# Move into the src folder (app.py and the data file live here together)
+# Move into the src folder (app.py, requirements.txt, and the CSV all live here together)
 cd src
 
-# Install dependencies
+# Install dependencies (only needs to be done once)
 pip install -r requirements.txt
 
 # Run the application
 streamlit run app.py
 ```
+
+Your browser will open automatically at `http://localhost:8501`. The app expects `app.py` and `nigeria_combined_water_data.csv` to be in the same folder. If you move one, move the other with it.
+
+> **A note on versions:** `requirements.txt` pins exact package versions (e.g., `streamlit==1.60.0`). If you install a newer version of Streamlit than the one pinned there, some layout or styling behavior may differ slightly from what's described in this README. For the closest match to the live app, run `pip install -r requirements.txt` as-is rather than upgrading the packages individually.
+
+> **A note on the code:** The codebase is thoroughly commented to support the Mentor Me Collective community, ensuring future Scholars can easily understand and build upon this automated data pipeline.
 
 ---
 
@@ -149,24 +239,25 @@ streamlit run app.py
 
 **Timeline:** July 15 to August 14, 2026 (BUILD Project window)
 
-| Phase | Task | Status |
-|---|---|---|
-| Phase 1 | Source and clean data: filter Kaggle dataset to Nigeria, extract and standardize data from two peer-reviewed case studies, merge into final combined dataset | Complete |
-| Phase 2 | Convert finalized dataset to CSV and build the Streamlit dashboard (filtering, risk classification, map, summary metrics, data table) | Upcoming |
-| Phase 3 | Test the app locally, confirm setup instructions work end-to-end, finalize README and repo structure | Upcoming |
-| Phase 4 | Record 5-minute project walkthrough video and link it in the README | Upcoming |
-| Phase 5 | Final review and submission via pull request to `main` on the `team-quantum-engineers` branch | Upcoming |
+| Phase | Task |
+|---|---|
+| Phase 1 | Source and clean data by filtering Kaggle dataset to Nigeria, extract and standardize data from two peer-reviewed case studies, and merge into final combined dataset. |
+| Phase 2 | Convert finalized dataset to CSV and build the Streamlit dashboard (which include filtering by region and water source type, risk classification, interactive map, summary metrics, and data tables). |
+| Phase 3 | Test the app locally, confirm setup instructions work end-to-end, and finalize README and repo structure. |
+| Phase 4 | Record 5-minute project walkthrough video and link it in the README. |
+| Phase 5 | Submit final review and submission via pull request to `main` on the `team-quantum-engineers` branch. |
 
 **Resources:**
 
 * **Data:** Kaggle dataset plus two peer-reviewed academic case studies (see [Research & Data](#research-data) for full details)
-* **Tools:** Python, Streamlit, Pandas, NumPy
-* **Team:** Five cross-functional Scholars collaborating together throughout, including joint working sessions for planning and development
+* **Tools:** Python, Streamlit, Pandas, NumPy, pydeck, CSS
 
 **Risks & Mitigation:**
 
 * **Data inconsistency across sources:** Since the dataset merges a general Kaggle dataset with two independently collected academic studies, column names and formats needed to be manually standardized before merging. This was addressed by aligning column names and units across all three sources before combining them into the final dataset.
-* **Team members' unfamiliarity with Streamlit/GitHub:** Several team members are new to Streamlit and GitHub. Mitigated by working collaboratively through shared sessions and keeping setup instructions explicit for anyone following along.
+* **Team members' unfamiliarity with Streamlit and GitHub:** Several team members are new to Streamlit and GitHub. This was mitigated by working collaboratively through co-working sessions and peer code review of each other's work.
+* **AI-assisted development:** The team used Claude, an AI assistant, to help draft and troubleshoot portions of the Python codebase. Since AI-suggested code isn't guaranteed to be correct or optimal, every AI-assisted change was reviewed, tested, and adjusted by the team before being merged, in addition to the peer code review noted above.
+* **Dependency and version drift:** `requirements.txt` pins exact package versions (e.g., `streamlit==1.60.0`) rather than open-ended version ranges. This protects the deployed app from unannounced behavior or styling changes if Streamlit, Pandas, NumPy, or pydeck release a new version. The app keeps using the tested version pins unless the team deliberately upgrades and re-tests.
 
 ---
 
@@ -176,6 +267,9 @@ streamlit run app.py
 * Add a year-over-year trend visualization (e.g., average contaminant and bacteria levels by year) to surface long-term sanitation patterns, building on the year-tagged records already in the dataset.
 * Expand data ingestion to incorporate real-time automated IoT sensor feeds from local water treatment facilities.
 * Integrate an automated multi-language notification service to alert community residents via SMS regarding urgent water quality shifts.
+* Introduce user login feature so community members can save the region(s) they care about and receive personalized alerts when local readings change, rather than checking the dashboard manually. Because this would mean storing user accounts and preferences, it should be built alongside:
+  * **Role-Based Access Control (RBAC)**, so different account types (e.g., community members vs. municipal administrators) see only the data and controls appropriate to their role.
+  * **Data encryption**, so that account credentials and any stored personal information are protected both in transit and at rest.
 
 ---
 
