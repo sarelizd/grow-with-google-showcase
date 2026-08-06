@@ -56,13 +56,12 @@
 
 <a name="screenshots"></a>
 ## 📸 Screenshots
-
 <table>
 <tr>
 <td width="50%">
 
 **Dashboard Overview:**
-Live summary metrics and Safe / Moderate Risk / High Risk status banners.
+Summary metrics (Total Samples, Safe Sources, Active Alerts) and the Safe / Moderate Risk / High Risk status banners, based on the filtered dataset.
 
 ![AquaWatch Naija dashboard overview showing summary metrics and safety status banners](./docs/dashboard-overview.png)
 
@@ -88,7 +87,7 @@ Hovering a point on the Water Safety Map shows the year, region, water source, r
 <td width="50%">
 
 **Map Tooltip (High Risk Reading):**
-The same tooltip on a High Risk point, showing the breach reason.
+The same tooltip on a High Risk point, showing what caused the High Risk flag.
 
 ![Water Safety Map tooltip showing a High Risk reading](./docs/map-tooltip-high-risk.png)
 
@@ -98,7 +97,7 @@ The same tooltip on a High Risk point, showing the breach reason.
 <td width="50%">
 
 **Water Safety Status by Region:**
-Risk counts and results table filtered to a specific region and water source.
+Risk counts, filterable by region and water source, with a results table showing Year, Region, Water Source Type, Risk Level, pH Level, and Turbidity (NTU).
 
 ![Water Safety Status by Region table filtered to West region and River source](./docs/water-safety-status-by-region.png)
 
@@ -106,7 +105,7 @@ Risk counts and results table filtered to a specific region and water source.
 <td width="50%">
 
 **Municipal Water Testing Results:**
-Full results with Risk Level, Risk Reason, and Disease Indicator columns.
+Full results table, scrolled to show Water Treatment Method, Risk Level, Risk Reason, and Disease Indicator / Risk columns.
 
 ![Municipal Water Testing Results table showing risk level, risk reason, and disease indicator columns](./docs/municipal-water-testing-results.png)
 
