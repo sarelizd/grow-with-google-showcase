@@ -59,6 +59,7 @@
 
 <a name="screenshots"></a>
 ## 📸 Screenshots
+
 <table>
 <tr>
 <td width="50%">
@@ -82,7 +83,7 @@ Every test site plotted and color-coded by risk level across Nigeria.
 <td width="50%">
 
 **Map Tooltip (Safe Reading):**
-Hovering a point on the Water Safety Map shows the year, region, water source, risk level, and reason.
+Hovering a point on the Water Safety Map shows the Year, Region, Water Source, Risk Level, and Reason.
 
 ![Water Safety Map tooltip showing a Safe reading](./docs/map-tooltip-safe.png)
 
@@ -191,6 +192,12 @@ The Nigeria-filtered Kaggle data and the two case-study datasets were merged int
 
 Data cleaning, metric standardization, and exploratory data analysis were used throughout to isolate key contamination thresholds and safety indicators for public consumption.
 
+### How risk is calculated
+
+Only pH (6.5 to 8.5) and Turbidity (5.0 NTU or below) are official WHO guideline values. Bacteria (1000 CFU/mL or below) and Contaminant Level (7.0 ppm or below) are dataset-calibrated cutoffs instead, since the source data doesn't specify which pathogen or contaminant was tested. A sample is High Risk at 2 or more threshold breaches, Moderate Risk at 1, and Safe at 0.
+
+Risk Level and Disease Indicator / Risk are separate signals. Risk Level checks whether a water sample passes its own safety checks. Disease Indicator / Risk checks whether the region is seeing higher rates of Cholera, Typhoid, or Diarrheal disease (the 9 Abuja/Benue South sites without regional disease data show the original field contamination note instead). Regional illness can stem from causes beyond a single water sample, such as storage, distribution, sanitation, or a past outbreak. Because of that, a sample can read Safe even in a High-disease-indicator region. That's expected, not an error.
+
 ---
 
 <a name="setup-instructions"></a>
@@ -251,7 +258,7 @@ Your browser will open automatically at `http://localhost:8501`. The app expects
 | Phase | Task |
 |---|---|
 | Phase 1 | Source and clean data by filtering Kaggle dataset to Nigeria, extract and standardize data from two peer-reviewed case studies, and merge into final combined dataset. |
-| Phase 2 | Convert finalized dataset to CSV and build the Streamlit dashboard (which include filtering by region and water source type, risk classification, interactive map, summary metrics, and data tables). |
+| Phase 2 | Convert finalized dataset to CSV and build the Streamlit dashboard (which includes filtering by region and water source type, risk classification, interactive map, summary metrics, and data tables). |
 | Phase 3 | Test the app locally, confirm setup instructions work end-to-end, and finalize README and repo structure. |
 | Phase 4 | Record 5-minute project walkthrough video and link it in the README. |
 | Phase 5 | Submit final review and submission via pull request to `main` on the `team-quantum-engineers` branch. |
