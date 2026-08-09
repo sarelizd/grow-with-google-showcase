@@ -194,9 +194,9 @@ Data cleaning, metric standardization, and exploratory data analysis were used t
 
 ### How risk is calculated
 
-Only pH (6.5 to 8.5) and Turbidity (5.0 NTU or below) are official WHO guideline values. Bacteria (1000 CFU/mL or below) and Contaminant Level (7.0 ppm or below) are dataset-calibrated cutoffs instead, since the source data doesn't specify which pathogen or contaminant was tested. A sample is High Risk at 2 or more threshold breaches, Moderate Risk at 1, and Safe at 0.
+Only pH (6.5 to 8.5) and Turbidity (5.0 NTU or below) are official WHO guideline values. Bacteria (1000 CFU/mL or below) and Contaminant Level (7.0 ppm or below) are dataset-calibrated cutoffs instead, since the source data doesn't specify which pathogen or contaminant was tested. A sample is High Risk at 2 or more threshold breaches, Moderate Risk at 1, and Safe at 0. For the 9 Abuja/Benue South rows that lack numeric Bacteria/Contaminant readings, a qualitative field note ("Extreme," "High," etc.) stands in for those two checks, so those sites are still screened on contamination rather than judged on pH/Turbidity alone.
 
-Risk Level and Disease Indicator / Risk are separate signals. Risk Level checks whether a water sample passes its own safety checks. Disease Indicator / Risk checks whether the region is seeing higher rates of Cholera, Typhoid, or Diarrheal disease (the 9 Abuja/Benue South sites without regional disease data show the original field contamination note instead). Regional illness can stem from causes beyond a single water sample, such as storage, distribution, sanitation, or a past outbreak. Because of that, a sample can read Safe even in a High-disease-indicator region. That's expected, not an error.
+Risk Level and Disease Indicator / Risk are separate signals. Risk Level checks whether a water sample passes its own safety checks. Disease Indicator / Risk checks whether the region is seeing higher rates of Cholera, Typhoid, or Diarrheal disease (the same 9 Abuja/Benue South sites, which have no regional disease-case data, show the original field contamination note here too). Regional illness can stem from causes beyond a single water sample, such as storage, distribution, sanitation, or a past outbreak. Because of that, a sample can read Safe even in a High-disease-indicator region. That's expected, not an error.
 
 ---
 
