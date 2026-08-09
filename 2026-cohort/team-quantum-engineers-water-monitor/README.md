@@ -101,7 +101,7 @@ The same tooltip on a High Risk point, showing what caused the High Risk flag.
 <td width="50%">
 
 **Water Safety Status by Region:**
-Risk counts, filterable by region and water source, with a results table showing Year, Region, Water Source Type, Risk Level, pH Level, and Turbidity (NTU). Shown here filtered to the Central region and Lake source.
+Shows risk counts filterable by region and water source, plus a results table with Year, Region, Water Source Type, Risk Level, pH Level, and Turbidity (NTU). The table shown here is filtered to the Central region and Lake source.
 
 ![Water Safety Status by Region table filtered to Central region and Lake source](./docs/water-safety-status-by-region.png)
 
@@ -109,7 +109,7 @@ Risk counts, filterable by region and water source, with a results table showing
 <td width="50%">
 
 **Municipal Water Testing Results:**
-Full results table, scrolled to show Water Treatment Method, Risk Level, Risk Reason, and Disease Indicator / Risk columns.
+Full results table, scrolled to show Water Treatment Method, Risk Level, Risk Reason, and Disease Indicator / Risk columns. The table scrolls horizontally in the live app. This screenshot is cropped mid-column to show that scrollbar.
 
 ![Municipal Water Testing Results table showing risk level, risk reason, and disease indicator columns](./docs/municipal-water-testing-results.png)
 
