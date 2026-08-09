@@ -109,7 +109,7 @@ Shows risk counts filterable by region and water source, plus a results table wi
 <td width="50%">
 
 **Municipal Water Testing Results:**
-Full results table, scrolled to show Water Treatment Method, Risk Level, Risk Reason, and Disease Indicator / Risk columns. The table scrolls horizontally in the live app. This screenshot is cropped mid-column to show that scrollbar.
+Full results table, scrolled right to reveal the Water Treatment Method, Risk Level, Risk Reason, and Disease Indicator / Risk columns. The table scrolls both horizontally and vertically in the live app. This screenshot is cropped mid-column to show the horizontal scrollbar.
 
 ![Municipal Water Testing Results table showing risk level, risk reason, and disease indicator columns](./docs/municipal-water-testing-results.png)
 
