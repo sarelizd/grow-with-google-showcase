@@ -100,9 +100,9 @@ The same tooltip on a High Risk point, showing what caused the High Risk flag.
 <td width="50%">
 
 **Water Safety Status by Region:**
-Risk counts, filterable by region and water source, with a results table showing Year, Region, Water Source Type, Risk Level, pH Level, and Turbidity (NTU).
+Risk counts, filterable by region and water source, with a results table showing Year, Region, Water Source Type, Risk Level, pH Level, and Turbidity (NTU). Shown here filtered to the Central region and Lake source.
 
-![Water Safety Status by Region table filtered to West region and River source](./docs/water-safety-status-by-region.png)
+![Water Safety Status by Region table filtered to Central region and Lake source](./docs/water-safety-status-by-region.png)
 
 </td>
 <td width="50%">
@@ -119,7 +119,7 @@ Full results table, scrolled to show Water Treatment Method, Risk Level, Risk Re
 **Community Action Steps:**
 Guided next steps for residents, based on the currently filtered Risk Level.
 
-![Community Action Steps showing three guided steps for residents](./docs/community-action-steps.png)
+![Community Action Steps showing four guided steps for residents](./docs/community-action-steps.png)
 
 ---
 
