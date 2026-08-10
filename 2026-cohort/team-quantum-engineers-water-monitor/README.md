@@ -48,12 +48,12 @@
 
 | Feature | Description |
 |---|---|
-| **Interactive Dashboard** | Visualizes water testing results in an accessible, non-technical format, with sidebar filters by Region and Water Source Type. |
-| **Color-Coded Safety Map** | An interactive map plots every test site and color-codes it Green (Safe), Orange (Moderate Risk), or Red (High Risk); hovering a point shows the year, region, water source, risk level, and reason. |
+| **Interactive Dashboard** | Visualizes water testing results in an accessible, non-technical format with sidebar filters by Region and Water Source Type. |
+| **Color-Coded Safety Map** | An interactive map plots every test site and color-codes it Green (Safe), Orange (Moderate Risk), or Red (High Risk); hovering a point shows the Year, Region, Water Source, Risk Level, and Reason. |
 | **Year-Tagged Records** | The Kaggle dataset and regional case studies include water testing results from 2000-2024. Every test result is tagged by year, and the year is surfaced throughout the dashboard. The year is indicated in the first column in both data tables, in the map's hover tooltip, and in the Community Action Steps guidance, so users always know how current a reading is. |
 | **Contamination Threshold Alerts** | Highlights when key safety indicators (pH, turbidity, bacteria count, contaminant level) cross public health thresholds, with dedicated Safe / Moderate Risk / High Risk banners. |
 | **Disease Indicator / Risk Column** | Surfaces the original field-recorded public health notes where available, and otherwise names whichever disease (Cholera, Typhoid, or Diarrheal) has the highest reported incidence for that record. |
-| **Data Standardization Pipeline** | Cleans and aggregates data from disparate public and academic sources, standardizing them into one consistent schema. |
+| **Data Standardization Pipeline** | Cleans and aggregates data from public and academic sources, standardizing them into one consistent schema. |
 
 ---
 
@@ -118,7 +118,7 @@ Full results table, scrolled right to reveal the Water Treatment Method, Risk Le
 </table>
 
 **Community Action Steps:**
-Guided next steps for residents, based on the currently filtered Risk Level.
+Guided next steps for residents are based on the currently filtered Risk Level.
 
 ![Community Action Steps showing four guided steps for residents](./docs/community-action-steps.png)
 
@@ -130,7 +130,7 @@ Guided next steps for residents, based on the currently filtered Risk Level.
 AquaWatch Naija directly supports **UN SDG 6: Clean Water and Sanitation** by:
 
 * Increasing **public access to information** on local water safety. This is a core barrier to SDG 6 progress in underserved communities.
-* Enabling **community accountability**, giving residents visibility into water testing results rather than relying on delayed or inaccessible official reports.
+* Enabling **community accountability** by giving residents visibility into water testing results rather than relying on delayed or inaccessible official reports.
 * Laying groundwork for **early-warning capability**, which supports the water-quality monitoring and management aims underlying SDG 6's broader targets.
 
 ---
@@ -144,14 +144,14 @@ AquaWatch Naija directly supports **UN SDG 6: Clean Water and Sanitation** by:
 * **Styling:** Custom CSS, embedded directly in `app.py`, for the dashboard's glassmorphism-style visual design
 * **Data Processing:** Pandas and NumPy-based cleaning, aggregation, and standardization pipeline
 * **Deployment:** Streamlit Community Cloud
-* **Data Sources:** Kaggle dataset plus two peer-reviewed academic case studies (see [Research & Data](#research-data) for full details)
+* **Data Sources:** Kaggle dataset plus two academic case studies (see [Research & Data](#research-data) for full details)
 
 ---
 
 <a name="grow-with-google-resources"></a>
 ## 🎓 Grow with Google Resources Used
 
-The team collectively drew on the following Grow with Google Career Certificates to build, structure, and execute this project:
+The team collectively drew on the following Grow with Google Career Certificates to build, structure, and execute this project.
 
 * Google Data Analytics Professional Certificate
 * Google Advanced Data Analytics Professional Certificate
@@ -161,10 +161,10 @@ The team collectively drew on the following Grow with Google Career Certificates
 
 **Applied Skills:**
 
-* **Data Analytics & Advanced Data Analytics:** Shaped the risk classification logic, the color-coded map, and the summary metrics, and guided how the three merged data sources were structured for exploratory analysis.
+* **Data Analytics & Advanced Data Analytics:** Shaped the risk classification logic, the color-coded map, the summary metrics, and guided how the three merged data sources were structured for exploratory analysis.
 * **IT Automation with Python:** Powered the data cleaning, standardization, and aggregation pipeline that merges the Kaggle dataset with the two case studies into one schema.
 * **Cybersecurity:** Informed how the team thought about protecting future user data as the project grows; this shows up directly in the [Future Ideas](#future-ideas) section's plans for role-based access control and encryption once user accounts are introduced.
-* **Digital Marketing & E-commerce:** Informed the public-facing presentation of the dashboard, including plain-language framing of risk levels and Community Action Steps, aimed at helping non-technical residents understand and act on the data.
+* **Digital Marketing & E-commerce:** Translated complex dataset outputs into accessible messaging, user-centric visualizations, plain-language risk framing, and practical Community Action Steps that drive resident engagement.
 
 ---
 
@@ -173,22 +173,22 @@ The team collectively drew on the following Grow with Google Career Certificates
 
 **Data Sources:**
 
-* [Water Pollution and Disease dataset (Kaggle)](https://www.kaggle.com/datasets/khushikyad001/water-pollution-and-disease) by Khushi Yadav. Filtered to Nigeria-only records.
+* Yadav, K. (2024). Water pollution & disease [Dataset]. Kaggle. https://www.kaggle.com/datasets/khushikyad001/water-pollution-and-disease
 * Adejuwon, E. O., Ogwueleka, T. C., Ogungbemi, E. O., Prabhu, R., Rendon-Nava, A., and Yates, K. (2025). [Assessment of Surface Water Quality Using Chemometric Tools: A Case Study of Jabi Lake, Abuja, Nigeria](https://doi.org/10.1007/s40996-024-01712-2). Iranian Journal of Science and Technology, Transactions of Civil Engineering, 49, 829-852.
 * Edegbene, A. O., Yandev, D., Omotehinwa, T. O., Zakaria, H., and Andy, B. O. (2025). [Water quality assessment in Benue South, Nigeria: An investigation of physico-chemical and microbial characteristics](https://doi.org/10.1080/23570008.2025.2483013). Water Science, 39(1), 279-290.
 
 ### Methodology
 
-This project combines a national dataset with two peer-reviewed regional case studies to build a hyperlocal, Nigeria-specific water quality picture, standing in for the centralized municipal dashboard described in the problem statement.
+This project combines a national dataset with two peer-reviewed regional case studies to build a hyperlocal, Nigeria-specific water quality picture. AquaWatch Naija is the centralized municipal dashboard described in the problem statement.
 
 * The Kaggle dataset (3,000 records across multiple countries) was filtered down to Nigeria-only records, producing an initial Nigeria dataset covering the regions South, Central, East, North, and West.
-* Water quality measurements from the two peer-reviewed case studies were extracted and standardized into a matching format:
+* Water quality measurements from the case studies were extracted and standardized into a matching format:
   * The Jabi Lake study contributed the **Abuja (FCT)** data.
   * The Benue South study contributed data for the **Benue South Senatorial District**, drawing on water sources across three Local Government Areas (LGAs) within Benue State, Nigeria: **Otukpo, Ohimini, and Apa**.
 
   > **Note:** Benue South is not the same as the broad "South" region from the Kaggle dataset, which spans multiple, unrelated parts of the country. "South" and "Benue South" are two distinct regions from two different sources and are kept separate throughout the dataset and the dashboard.
 
-The Nigeria-filtered Kaggle data and the two case-study datasets were merged into a single finalized dataset (`nigeria_combined_water_data.csv`), which powers the dashboard.
+The Nigeria-filtered Kaggle dataset and the relevant case study data were merged into a single, finalized dataset (`nigeria_combined_water_data.csv`), which powers the dashboard.
 
 Data cleaning, metric standardization, and exploratory data analysis were used throughout to isolate key contamination thresholds and safety indicators for public consumption.
 
@@ -207,7 +207,7 @@ Risk Level and Disease Indicator / Risk are separate signals. Risk Level checks 
 
 👉 **[team-quantum-engineers-water-monitor.streamlit.app](https://team-quantum-engineers-water-monitor.streamlit.app/)**
 
-This is the fastest way to explore the dashboard. Filter by region and water source, view the safety map, and browse the full testing results table, all in your browser.
+This is the fastest way to explore the dashboard. Filter by Region and Water Source, view the Water Safety Map, and browse the full testing results table, all in your browser.
 
 ### Option B: Run it locally
 
@@ -237,14 +237,14 @@ Your browser will open automatically at `http://localhost:8501`. The app expects
 
 > **A note on versions:** `requirements.txt` pins exact package versions (e.g., `streamlit==1.60.0`). If you install a newer version of Streamlit than the one pinned there, some layout or styling behavior may differ slightly from what's described in this README. For the closest match to the live app, run `pip install -r requirements.txt` as-is rather than upgrading the packages individually.
 
-> **A note on the code:** The codebase is thoroughly commented to support the Mentor Me Collective community, ensuring future Scholars can easily understand and build upon this automated data pipeline.
+> **A note on the code:** The codebase is thoroughly documented to support the Mentor Me Collective community, ensuring future Scholars can easily understand and build upon this automated data pipeline.
 
 ---
 
 <a name="video-walkthrough"></a>
 ## 🎥 Video Walkthrough
 
-* **Project Demonstration:** [Watch the 5-Minute Project Walkthrough](https://www.youtube.com/watch?v=placeholder)
+* **Project Demonstration:** [Watch the Project Walkthrough Video](https://www.youtube.com/watch?v=placeholder)
 
 > ⚠️ **Before final submission:** this link is still a placeholder. Replace it with the actual recording link once the walkthrough video is recorded, and confirm it plays before opening the pull request.
 
@@ -285,9 +285,9 @@ Your browser will open automatically at `http://localhost:8501`. The app expects
 * Expand data ingestion to incorporate real-time automated IoT sensor feeds from local water treatment facilities.
 * Partner directly with municipal water authorities to source live official testing results, moving the dashboard from academic/public-dataset-backed data toward a true real-time municipal feed.
 * Integrate an automated multi-language notification service to alert community residents via SMS regarding urgent water quality shifts.
-* Introduce user login feature so community members can save the region(s) they care about and receive personalized alerts when local readings change, rather than checking the dashboard manually. Because this would mean storing user accounts and preferences, it should be built alongside:
-  * **Role-Based Access Control (RBAC)**, so different account types (e.g., community members vs. municipal administrators) see only the data and controls appropriate to their role.
-  * **Data encryption**, so that account credentials and any stored personal information are protected both in transit and at rest.
+* Introduce user login feature so community members can save the region(s) they care about and receive personalized alerts when local readings change, rather than checking the dashboard manually. This would mean storing user accounts and preferences, and it should be built alongside:
+  * **Role-Based Access Control (RBAC)** so different account types (e.g., community members vs. municipal administrators) see only the data and controls appropriate to their role.
+  * **Data encryption** so that account credentials and any stored personal information are protected both in transit and at rest.
 
 ---
 
