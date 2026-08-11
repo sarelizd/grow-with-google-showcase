@@ -812,7 +812,7 @@ with st.sidebar:
     st.markdown("---")
     st.caption(
         f"**Safety thresholds:** pH ({PH_MIN}–{PH_MAX}) and Turbidity (≤ {TURBIDITY_MAX} NTU) "
-        "reflect WHO drinking-water guidance on operational/acceptability parameters, not "
+        "reflect WHO drinking water guidance on operational/acceptability parameters, not "
         "formal numeric guideline values the way WHO sets for specific health-based "
         f"contaminants. Bacteria (≤ {int(BACTERIA_MAX)} CFU/mL) and Contaminant Level "
         f"(≤ {CONTAMINANT_MAX} ppm) are dataset-calibrated cutoffs with no WHO basis at all "
