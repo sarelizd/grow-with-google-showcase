@@ -244,9 +244,7 @@ Your browser will open automatically at `http://localhost:8501`. The app expects
 <a name="video-walkthrough"></a>
 ## 🎥 Video Walkthrough
 
-* **Project Demonstration:** [Watch the Project Walkthrough Video](https://www.youtube.com/watch?v=placeholder)
-
-> ⚠️ **Before final submission:** this link is still a placeholder. Replace it with the actual recording link once the walkthrough video is recorded, and confirm it plays before opening the pull request.
+* **Project Demonstration:** [Watch the Project Walkthrough Video](https://youtu.be/vCDKWgl18uc?si=7mRyWpNsg9fljHA-)
 
 ---
 
