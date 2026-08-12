@@ -244,7 +244,7 @@ Your browser will open automatically at `http://localhost:8501`. The app expects
 <a name="video-walkthrough"></a>
 ## 🎥 Video Walkthrough
 
-* **Project Demonstration:** [Watch the Project Walkthrough Video](https://youtu.be/vCDKWgl18uc?si=7mRyWpNsg9fljHA-)
+* **Project Demonstration:** [Watch the Project Walkthrough Video Here](https://youtu.be/vCDKWgl18uc?si=7mRyWpNsg9fljHA-)
 
 ---
 
