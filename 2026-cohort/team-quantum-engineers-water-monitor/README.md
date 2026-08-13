@@ -36,8 +36,8 @@
 ## 🎯 What AquaWatch Naija Does (and Why It Matters)
 
 * **Problem Statement:** Community members lack a central, accessible public dashboard to view municipal water testing results and safety warnings.
-* **Solution Summary:** AquaWatch Naija is a centralized, interactive web application designed to transform water quality data into actionable, easy-to-understand insights. This project bridges the gap between complex public health data and everyday community awareness, empowering residents to monitor local safety levels and track historical sanitation metrics.
-* **A note on data provenance:** No single, unified public feed of Nigerian municipal water testing results currently exists, which is itself part of the access problem this project addresses. AquaWatch Naija approximates that missing central dashboard by combining a large public water-quality dataset with two peer-reviewed regional case studies (see [Research & Data](#research-data)) into one consistent, dashboard-ready format. The result models what a real municipal testing dashboard would look and feel like, using the best available public and academic data as a stand-in for direct municipal feeds.
+* **Solution Summary:** AquaWatch Naija is an interactive web application that transforms water quality data into clear, actionable insights. The project connects complex public health data with everyday community awareness, empowering residents to monitor local safety levels and track historical sanitation metrics.
+* **Where This Data Comes From:** No single public dashboard currently exists for local water testing in Nigeria, which is central to the challenge this project works to solve. AquaWatch Naija fills that gap by combining a major public water dataset with two peer-reviewed regional studies (see [Research & Data](#research-data)) into a unified format. Covering historical data from 2000-2024, it demonstrates how a municipal testing dashboard could function using the best available public and academic sources.
 
 *"Naija" is a common, everyday nickname for Nigeria, used widely by Nigerians themselves. The name reflects that this dashboard is built for and by the communities it serves.*
 
@@ -52,7 +52,7 @@
 | **Color-Coded Safety Map** | An interactive map plots every test site and color-codes it Green (Safe), Orange (Moderate Risk), or Red (High Risk); hovering a point shows the Year, Region, Water Source, Risk Level, and Reason. |
 | **Year-Tagged Records** | The Kaggle dataset and regional case studies include water testing results from 2000-2024. Every test result is tagged by year, and the year is surfaced throughout the dashboard. The year is indicated in the first column in both data tables, in the map's hover tooltip, and in the Community Action Steps guidance, so users always know how current a reading is. |
 | **Contamination Threshold Alerts** | Highlights when key safety indicators (pH, turbidity, bacteria count, contaminant level) cross public health thresholds, with dedicated Safe / Moderate Risk / High Risk banners. |
-| **Disease Indicator / Risk Column** | Surfaces the original field-recorded public health notes where available, and otherwise names whichever disease (Cholera, Typhoid, or Diarrheal) has the highest reported incidence for that record. |
+| **Disease Indicator / Risk Column** | Surfaces the original field-recorded public health notes where available, and otherwise names whichever disease (Cholera, Typhoid, or Diarrheal) has the highest reported incidence (per 100,000 people) for that record. |
 | **Data Standardization Pipeline** | Cleans and aggregates data from public and academic sources, standardizing them into one consistent schema. |
 
 ---
@@ -143,7 +143,7 @@ AquaWatch Naija directly supports **UN SDG 6: Clean Water and Sanitation** by:
 * **Mapping:** pydeck (interactive, color-coded map of test sites)
 * **Styling:** Custom CSS, embedded directly in `app.py`, for the dashboard's glassmorphism-style visual design
 * **Data Preparation:** Google Sheets, used to extract and merge the case-study data into the Kaggle dataset's format
-* **Data Processing:** Pandas and NumPy-based pipeline for cleaning, aggregation, and standardization
+* **Data Processing:** Pandas- and NumPy-based pipeline for cleaning, aggregation, and standardization
 * **Deployment:** Streamlit Community Cloud
 * **Data Sources:** Kaggle dataset plus two academic case studies (see [Research & Data](#research-data) for full details)
 
@@ -174,8 +174,8 @@ The team collectively drew on the following Grow with Google Career Certificates
 
 **Data Sources:**
 
-* Adejuwon, E. O., Ogwueleka, T. C., Ogungbemi, E. O., Prabhu, R., Rendon-Nava, A., and Yates, K. (2025). [Assessment of Surface Water Quality Using Chemometric Tools: A Case Study of Jabi Lake, Abuja, Nigeria](https://doi.org/10.1007/s40996-024-01712-2). Iranian Journal of Science and Technology, Transactions of Civil Engineering, 49, 829-852.
-* Edegbene, A. O., Yandev, D., Omotehinwa, T. O., Zakaria, H., and Andy, B. O. (2025). [Water quality assessment in Benue South, Nigeria: An investigation of physico-chemical and microbial characteristics](https://doi.org/10.1080/23570008.2025.2483013). Water Science, 39(1), 279-290.
+* Adejuwon, E. O., Ogwueleka, T. C., Ogungbemi, E. O., Prabhu, R., Rendon-Nava, A., & Yates, K. (2025). [Assessment of surface water quality using chemometric tools: A case study of Jabi Lake, Abuja, Nigeria](https://doi.org/10.1007/s40996-024-01712-2). *Iranian Journal of Science and Technology, Transactions of Civil Engineering*, *49*, 829-852.
+* Edegbene, A. O., Yandev, D., Omotehinwa, T. O., Zakaria, H., & Andy, B. O. (2025). [Water quality assessment in Benue South, Nigeria: An investigation of physico-chemical and microbial characteristics](https://doi.org/10.1080/23570008.2025.2483013). *Water Science*, *39*(1), 279-290.
 * World Health Organization. (2022). [Guidelines for drinking-water quality: Fourth edition incorporating the first and second addenda](https://www.who.int/publications/i/item/9789240045064).
 * Yadav, K. (2024). [Water pollution & disease](https://www.kaggle.com/datasets/khushikyad001/water-pollution-and-disease) [Dataset]. Kaggle.
 
@@ -194,7 +194,7 @@ The Nigeria-filtered Kaggle dataset and the relevant case study data were merged
 
 Data cleaning, metric standardization, and exploratory data analysis were used throughout to isolate key contamination thresholds and safety indicators for public consumption.
 
-### How risk is calculated
+### How Risk Is Calculated
 
 pH (6.5–8.5) and Turbidity (5.0 NTU or below) reflect World Health Organization (WHO) drinking water guidance on operational and acceptability parameters, not formal numeric guideline values the way WHO sets for specific health-based contaminants. Bacteria (1000 CFU/mL or below) and Contaminant Level (7.0 ppm or below) are dataset-calibrated cutoffs with no WHO basis at all since the source data doesn't identify which pathogen or contaminant was tested. For context, WHO's actual standard for E. coli is zero detectable presence in any 100 mL sample. A sample is High Risk at 2 or more threshold breaches, Moderate Risk at 1, and Safe at 0. For the 9 Abuja/Benue South rows that lack numeric Bacteria/Contaminant readings, a qualitative field note (e.g., "Extreme," "High") stands in for those two checks, so those sites are still screened on contamination rather than judged on pH/Turbidity alone.
 
@@ -209,7 +209,7 @@ Risk Level and Disease Indicator / Risk are separate signals. Risk Level checks 
 
 👉 **[team-quantum-engineers-water-monitor.streamlit.app](https://team-quantum-engineers-water-monitor.streamlit.app/)**
 
-This is the fastest way to explore the dashboard. Filter by Region and Water Source, view the Water Safety Map, and browse the full testing results table, all in your browser.
+This is the fastest way to explore the dashboard. Filter by Region and Water Source Type, view the Water Safety Map, and browse the full testing results table, all in your browser.
 
 ### Option B: Run it locally
 
@@ -257,8 +257,8 @@ Your browser will open automatically at `http://localhost:8501`. The app expects
 
 | Phase | Task |
 |---|---|
-| Phase 1 | Source and clean data by filtering Kaggle dataset to Nigeria, extract and standardize data from two peer-reviewed case studies, and merge into final combined dataset. |
-| Phase 2 | Convert finalized dataset to CSV and build the Streamlit dashboard (which includes filtering by region and water source type, risk classification, interactive map, summary metrics, and data tables). |
+| Phase 1 | Source and clean data by filtering Kaggle dataset to Nigeria, extract and standardize data from two peer-reviewed case studies, and merge into a final combined dataset. |
+| Phase 2 | Convert finalized dataset to a CSV file and build the Streamlit dashboard (which includes filtering by region and water source, risk classification, interactive map, summary metrics, and data tables). |
 | Phase 3 | Test the app locally, confirm setup instructions work end-to-end, and finalize README and repo structure. |
 | Phase 4 | Record 5-minute project walkthrough video and link it in the README. |
 | Phase 5 | Submit final review and submission via pull request to `main` on the `team-quantum-engineers` branch. |
@@ -283,10 +283,10 @@ Your browser will open automatically at `http://localhost:8501`. The app expects
 
 * Add a year-over-year trend visualization (e.g., average contaminant and bacteria levels by year) to surface long-term sanitation patterns, building on the year-tagged records already in the dataset.
 * Expand data ingestion to incorporate real-time automated IoT sensor feeds from local water treatment facilities.
-* Partner directly with municipal water authorities to source live official testing results, moving the dashboard from academic/public-dataset-backed data toward a true real-time municipal feed.
+* Partner directly with municipal water authorities to source live official testing results, moving the dashboard from academic/public-dataset-backed data toward a true, real-time municipal feed.
 * Integrate an automated multi-language notification service to alert community residents via SMS regarding urgent water quality shifts.
-* Introduce user login feature so community members can save the region(s) they care about and receive personalized alerts when local readings change, rather than checking the dashboard manually. This would mean storing user accounts and preferences, and it should be built alongside:
-  * **Role-Based Access Control (RBAC)** so different account types (e.g., community members vs. municipal administrators) see only the data and controls appropriate to their role.
+* Introduce a user login feature so community members can save the region(s) they care about and receive personalized alerts when local readings change, rather than checking the dashboard manually. This would mean storing user accounts and preferences, and it should be built alongside:
+  * **Role-Based Access Control (RBAC)** so that different account types (e.g., community members vs. municipal administrators) see only the data and controls appropriate to their role.
   * **Data encryption** so that account credentials and any stored personal information are protected both in transit and at rest.
 
 ---
