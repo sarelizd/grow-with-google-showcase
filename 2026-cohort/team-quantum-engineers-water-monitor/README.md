@@ -177,6 +177,7 @@ The team collectively drew on the following Grow with Google Career Certificates
 * Yadav, K. (2024). Water pollution & disease [Dataset]. Kaggle. https://www.kaggle.com/datasets/khushikyad001/water-pollution-and-disease
 * Adejuwon, E. O., Ogwueleka, T. C., Ogungbemi, E. O., Prabhu, R., Rendon-Nava, A., and Yates, K. (2025). [Assessment of Surface Water Quality Using Chemometric Tools: A Case Study of Jabi Lake, Abuja, Nigeria](https://doi.org/10.1007/s40996-024-01712-2). Iranian Journal of Science and Technology, Transactions of Civil Engineering, 49, 829-852.
 * Edegbene, A. O., Yandev, D., Omotehinwa, T. O., Zakaria, H., and Andy, B. O. (2025). [Water quality assessment in Benue South, Nigeria: An investigation of physico-chemical and microbial characteristics](https://doi.org/10.1080/23570008.2025.2483013). Water Science, 39(1), 279-290.
+* World Health Organization. (2022). [Guidelines for drinking-water quality: Fourth edition incorporating the first and second addenda](https://www.who.int/publications/i/item/9789240045064).
 
 ### Methodology
 
