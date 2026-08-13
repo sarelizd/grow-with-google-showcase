@@ -73,7 +73,7 @@ Summary metrics (Total Samples, Safe Sources, Active Alerts) and the Safe / Mode
 <td width="50%">
 
 **Water Safety Map:**
-Every test site plotted and color-coded by risk level across Nigeria.
+Every test site is plotted and color-coded by risk level across Nigeria.
 
 ![Water Safety Map showing color-coded test sites across Nigeria](./docs/water-safety-map.png)
 
@@ -142,7 +142,8 @@ AquaWatch Naija directly supports **UN SDG 6: Clean Water and Sanitation** by:
 * **Framework:** Streamlit (interactive dashboard/web app)
 * **Mapping:** pydeck (interactive, color-coded map of test sites)
 * **Styling:** Custom CSS, embedded directly in `app.py`, for the dashboard's glassmorphism-style visual design
-* **Data Processing:** Pandas and NumPy-based cleaning, aggregation, and standardization pipeline
+* **Data Preparation:** Google Sheets, used to extract and merge the case-study data into the Kaggle dataset's format
+* **Data Processing:** Pandas and NumPy-based pipeline for cleaning, aggregation, and standardization
 * **Deployment:** Streamlit Community Cloud
 * **Data Sources:** Kaggle dataset plus two academic case studies (see [Research & Data](#research-data) for full details)
 
@@ -188,7 +189,7 @@ This project combines a national dataset with two peer-reviewed regional case st
 
   > **Note:** Benue South is not the same as the broad "South" region from the Kaggle dataset, which spans multiple, unrelated parts of the country. "South" and "Benue South" are two distinct regions from two different sources and are kept separate throughout the dataset and the dashboard.
 
-The Nigeria-filtered Kaggle dataset and the relevant case study data were merged into a single, finalized dataset (`nigeria_combined_water_data.csv`), which powers the dashboard.
+The Nigeria-filtered Kaggle dataset and the relevant case study data were merged in Google Sheets into a single, finalized dataset (`nigeria_combined_water_data.csv`), which powers the dashboard.
 
 Data cleaning, metric standardization, and exploratory data analysis were used throughout to isolate key contamination thresholds and safety indicators for public consumption.
 
@@ -264,7 +265,7 @@ Your browser will open automatically at `http://localhost:8501`. The app expects
 **Resources:**
 
 * **Data:** Kaggle dataset plus two peer-reviewed academic case studies (see [Research & Data](#research-data) for full details)
-* **Tools:** Python, Streamlit, Pandas, NumPy, pydeck, CSS
+* **Tools:** Python, Streamlit, Pandas, NumPy, pydeck, CSS, Google Sheets
 
 **Risks & Mitigation:**
 
