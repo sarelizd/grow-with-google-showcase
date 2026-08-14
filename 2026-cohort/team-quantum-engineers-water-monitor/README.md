@@ -5,6 +5,8 @@
 ![Built with](https://img.shields.io/badge/Built%20with-Python%20%7C%20Streamlit-1f425f)
 ![Status](https://img.shields.io/badge/Status-Cohort%20Submission%202026-orange)
 
+[**Live App**](https://team-quantum-engineers-water-monitor.streamlit.app/) · [**Video Walkthrough**](https://youtu.be/vCDKWgl18uc?si=7mRyWpNsg9fljHA-) · [**Setup Instructions**](#setup-instructions)
+
 **Team:** Quantum Engineers
 
 **Team Members:** Alaisha Key, Douglas Phiri, Manahil Bashir, Nkechika Akpe, Sarah Davis
@@ -205,41 +207,141 @@ Risk Level and Disease Indicator / Risk are separate signals. Risk Level checks 
 <a name="setup-instructions"></a>
 ## 🚀 Live App & Setup Instructions
 
-### Option A: Use the live app (no setup required)
+### Option A: Use the Live App (No Setup Required)
 
 👉 **[team-quantum-engineers-water-monitor.streamlit.app](https://team-quantum-engineers-water-monitor.streamlit.app/)**
 
 This is the fastest way to explore the dashboard. Filter by Region and Water Source Type, view the Water Safety Map, and browse the full testing results table, all in your browser.
 
-### Option B: Run it locally
+### Option B: Run It Locally
 
-Running locally is useful if you want to read or modify the code, rather than just view the dashboard.
+Running locally is useful if you want to read or modify the code rather than just view the dashboard.
 
-```bash
-# Clone the repository
-git clone https://github.com/MentorMeCollective/grow-with-google-showcase.git
+**Requirements:** Python 3.11 or higher and Git. If you're not sure whether you have these, follow the instructions for your operating system below. They include how to check and install what you need.
 
-# Navigate to the assigned team directory
-cd 2026-cohort/team-quantum-engineers-water-monitor
+---
 
-# Check out our team's working branch
-git checkout team-quantum-engineers
+#### On Mac
 
-# Move into the src folder (app.py, requirements.txt, and the CSV all live here together)
-cd src
+1. **Check for Git:**
+   ```
+   git --version
+   ```
+   If prompted to install "developer tools," click Install and wait for it to finish.
 
-# Install dependencies (only needs to be done once)
-pip install -r requirements.txt
+2. **Check your Python version:**
+   ```
+   python3 --version
+   ```
+   If it's below 3.11, install a newer version:
+   ```
+   # Install Homebrew (skip if you already have it: check with `brew --version`)
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Run the application
+   # Install Python 3.12
+   brew install python@3.12
+   ```
+
+3. **Clone the repository and check out our branch:**
+   ```
+   git clone https://github.com/sarelizd/grow-with-google-showcase.git
+   cd grow-with-google-showcase
+   git checkout team-quantum-engineers
+   cd 2026-cohort/team-quantum-engineers-water-monitor/src
+   ```
+
+4. **Create and activate a virtual environment:**
+   ```
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+   Your terminal prompt should now start with `(venv)`.
+
+5. **Install dependencies (only needed once):**
+   ```
+   pip install -r requirements.txt
+   ```
+
+6. **Run the app:**
+   ```
+   streamlit run app.py
+   ```
+   The very first time you run Streamlit on a new machine, it may ask for an email address for onboarding updates. This is optional; press Enter to skip it.
+
+7. **To stop:** press `Ctrl+C`, then optionally run `deactivate`.
+
+**Next time**, you only need:
+```
+cd path/to/grow-with-google-showcase/2026-cohort/team-quantum-engineers-water-monitor/src
+source venv/bin/activate
 streamlit run app.py
 ```
 
-Your browser will open automatically at `http://localhost:8501`. The app expects `app.py` and `nigeria_combined_water_data.csv` to be in the same folder. If you move one, move the other with it.
+---
 
-> **A note on versions:** `requirements.txt` pins exact package versions (e.g., `streamlit==1.60.0`). If you install a newer version of Streamlit than the one pinned there, some layout or styling behavior may differ slightly from what's described in this README. For the closest match to the live app, run `pip install -r requirements.txt` as-is rather than upgrading the packages individually.
+#### On Windows
 
-> **A note on the code:** The codebase is thoroughly documented to support the Mentor Me Collective community, ensuring future Scholars can easily understand and build upon this automated data pipeline.
+1. **Open PowerShell** (search "PowerShell" in the Start menu).
+
+2. **Check for Git:**
+   ```
+   git --version
+   ```
+   If not found, install it from [git-scm.com/download/win](https://git-scm.com/download/win) using the default options, then restart PowerShell.
+
+3. **Check your Python version:**
+   ```
+   python --version
+   ```
+   If it's below 3.11 or not found, install Python from [python.org/downloads](https://python.org/downloads). **On the installer's first screen, check "Add python.exe to PATH"** before clicking Install. Restart PowerShell afterward.
+
+4. **Clone the repository and check out our branch:**
+   ```
+   git clone https://github.com/sarelizd/grow-with-google-showcase.git
+   cd grow-with-google-showcase
+   git checkout team-quantum-engineers
+   cd 2026-cohort/team-quantum-engineers-water-monitor/src
+   ```
+
+5. **Create and activate a virtual environment:**
+   ```
+   python -m venv venv
+   venv\Scripts\activate
+   ```
+   Your prompt should now start with `(venv)`.
+
+   > If you get an error about script execution being disabled, run this once, then try activating again:
+   > ```
+   > Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+   > ```
+
+6. **Install dependencies (only needed once):**
+   ```
+   pip install -r requirements.txt
+   ```
+
+7. **Run the app:**
+   ```
+   streamlit run app.py
+   ```
+   The very first time you run Streamlit on a new machine, it may ask for an email address for onboarding updates. This is optional; press Enter to skip it.
+
+8. **To stop:** press `Ctrl+C`, then optionally run `deactivate`.
+
+**Next time**, you only need:
+```
+cd path\to\grow-with-google-showcase\2026-cohort\team-quantum-engineers-water-monitor\src
+venv\Scripts\activate
+streamlit run app.py
+```
+
+---
+
+### Notes
+
+- Your browser should open automatically at `http://localhost:8501`. If it doesn't, open that address manually.
+- `app.py` and `nigeria_combined_water_data.csv` must stay in the same folder. If you move one, move the other with it.
+- `requirements.txt` pins exact package versions (e.g., `streamlit==1.60.0`). Install it as-is rather than upgrading packages individually for the closest match to the live app.
 
 ---
 
