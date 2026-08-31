@@ -363,7 +363,7 @@ streamlit run app.py
 | Phase 2 | Convert finalized dataset to a CSV file and build the Streamlit dashboard (which includes filtering by region and water source, risk classification, interactive map, summary metrics, and data tables). |
 | Phase 3 | Test the app locally, confirm setup instructions work end-to-end, and finalize README and repo structure. |
 | Phase 4 | Record 5-minute project walkthrough video and link it in the README. |
-| Phase 5 | Submit final review and submission via pull request to `main` on the `team-quantum-engineers` branch. |
+| Phase 5 | Submit final review and submission via pull request to `2026-cohort` on the `team-quantum-engineers` branch. |
 
 **Resources:**
 
