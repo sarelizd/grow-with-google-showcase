@@ -1,9 +1,9 @@
-# 💧 AquaWatch Naija: Hyperlocal Water Quality Monitor Portal
+# AquaWatch Naija: Hyperlocal Water Quality Monitor Portal
 
 ![SDG](https://img.shields.io/badge/UN%20SDG-Goal%206%3A%20Clean%20Water%20%26%20Sanitation-0090CD)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Built with](https://img.shields.io/badge/Built%20with-Python%20%7C%20Streamlit-1f425f)
-![Status](https://img.shields.io/badge/Status-Cohort%20Submission%202026-orange)
+![Program](https://img.shields.io/badge/Program-Mentor%20Me%20Collective%20%7C%202026%20Cohort-orange)
 
 [**Live App**](https://team-quantum-engineers-water-monitor.streamlit.app/) · [**Video Walkthrough**](https://youtu.be/vCDKWgl18uc?si=7mRyWpNsg9fljHA-) · [**Setup Instructions**](#setup-instructions)
 
@@ -17,7 +17,7 @@
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
 1. [What AquaWatch Naija Does (and Why It Matters)](#what-it-does)
 2. [Key Features](#key-features)
@@ -35,18 +35,17 @@
 ---
 
 <a name="what-it-does"></a>
-## 🎯 What AquaWatch Naija Does (and Why It Matters)
+## What AquaWatch Naija Does (and Why It Matters)
 
-* **Problem Statement:** Community members lack a central, accessible public dashboard to view municipal water testing results and safety warnings.
-* **Solution Summary:** AquaWatch Naija is an interactive web application that transforms water quality data into clear, actionable insights. The project connects complex public health data with everyday community awareness, empowering residents to monitor local safety levels and track historical sanitation metrics.
-* **Where This Data Comes From:** No single public dashboard currently exists for local water testing in Nigeria, which is central to the challenge this project works to solve. AquaWatch Naija fills that gap by combining a major public water dataset with two peer-reviewed regional studies (see [Research & Data](#research-data)) into a unified format. Covering historical data from 2000-2024, it demonstrates how a municipal testing dashboard could function using the best available public and academic sources.
+* **Solution Summary:** AquaWatch Naija is a dashboard that takes water testing data and puts it in front of the people it actually affects. Instead of digging through public health reports or having no source at all, residents can look up their region, see whether the local water source is testing safe, and understand what to do about it if it isn't.
+* **Where This Data Comes From:** Nigeria doesn't have an easy-to-find, centralized public dashboard for municipal water testing results. Testing data instead tends to live scattered across individual academic studies and regional reports. AquaWatch Naija works to close that gap by pulling together a large public dataset with two peer-reviewed regional studies (see [Research & Data](#research-data)) and lining them up into one consistent format. The combined dataset spans 2000-2024, so the dashboard is grounded in real testing data rather than synthetic or placeholder numbers.
 
 *"Naija" is a common, everyday nickname for Nigeria, used widely by Nigerians themselves. The name reflects that this dashboard is built for and by the communities it serves.*
 
 ---
 
 <a name="key-features"></a>
-## ✨ Key Features
+## Key Features
 
 | Feature | Description |
 |---|---|
@@ -60,7 +59,7 @@
 ---
 
 <a name="screenshots"></a>
-## 📸 Screenshots
+## Screenshots
 
 <table>
 <tr>
@@ -127,7 +126,7 @@ Guided next steps for residents are based on the currently filtered Risk Level.
 ---
 
 <a name="sdg-alignment"></a>
-## 🌍 Alignment with SDG 6
+## Alignment with SDG 6
 
 AquaWatch Naija directly supports **UN SDG 6: Clean Water and Sanitation** by:
 
@@ -138,7 +137,7 @@ AquaWatch Naija directly supports **UN SDG 6: Clean Water and Sanitation** by:
 ---
 
 <a name="tech-stack"></a>
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Language:** Python
 * **Framework:** Streamlit (interactive dashboard/web app)
@@ -152,7 +151,7 @@ AquaWatch Naija directly supports **UN SDG 6: Clean Water and Sanitation** by:
 ---
 
 <a name="grow-with-google-resources"></a>
-## 🎓 Grow with Google Resources Used
+## Grow with Google Resources Used
 
 The team collectively drew on the following Grow with Google Career Certificates to build, structure, and execute this project.
 
@@ -172,7 +171,7 @@ The team collectively drew on the following Grow with Google Career Certificates
 ---
 
 <a name="research-data"></a>
-## 📊 Research & Data
+## Research & Data
 
 **Data Sources:**
 
@@ -183,7 +182,7 @@ The team collectively drew on the following Grow with Google Career Certificates
 
 ### Methodology
 
-This project combines a national dataset with two peer-reviewed regional case studies to build a hyperlocal, Nigeria-specific water quality picture. AquaWatch Naija is the centralized municipal dashboard described in the problem statement.
+This project combines a national dataset with two peer-reviewed regional case studies to build a hyperlocal, Nigeria-specific water quality picture. AquaWatch Naija demonstrates how the centralized municipal dashboard described in the problem statement could function, using public and academic data sources in place of an official testing feed.
 
 * The Kaggle dataset (3,000 records across multiple countries) was filtered down to Nigeria-only records, producing an initial Nigeria dataset covering the regions South, Central, East, North, and West.
 * Water quality measurements from the case studies were extracted and standardized into a matching format:
@@ -205,11 +204,11 @@ Risk Level and Disease Indicator / Risk are separate signals. Risk Level checks 
 ---
 
 <a name="setup-instructions"></a>
-## 🚀 Live App & Setup Instructions
+## Live App & Setup Instructions
 
 ### Option A: Use the Live App (No Setup Required)
 
-👉 **[team-quantum-engineers-water-monitor.streamlit.app](https://team-quantum-engineers-water-monitor.streamlit.app/)**
+**[team-quantum-engineers-water-monitor.streamlit.app](https://team-quantum-engineers-water-monitor.streamlit.app/)**
 
 This is the fastest way to explore the dashboard. Filter by Region and Water Source Type, view the Water Safety Map, and browse the full testing results table, all in your browser.
 
@@ -346,14 +345,14 @@ streamlit run app.py
 ---
 
 <a name="video-walkthrough"></a>
-## 🎥 Video Walkthrough
+## Video Walkthrough
 
 * **Project Demonstration:** [Watch the Project Walkthrough Video Here](https://youtu.be/vCDKWgl18uc?si=7mRyWpNsg9fljHA-)
 
 ---
 
 <a name="implementation-plan"></a>
-## 🗺️ Implementation Plan
+## Implementation Plan
 
 **Timeline:** July 15 to August 14, 2026 (BUILD Project window)
 
@@ -376,12 +375,12 @@ streamlit run app.py
 * **Team members' unfamiliarity with Streamlit and GitHub:** Several team members are new to Streamlit and GitHub. This was mitigated by working collaboratively through co-working sessions and peer code review of each other's work.
 * **AI-assisted development:** The team used Claude, an AI assistant, to help draft and troubleshoot portions of the Python codebase. Since AI-suggested code isn't guaranteed to be correct or optimal, every AI-assisted change was reviewed, tested, and adjusted by the team before being merged, in addition to the peer code review noted above.
 * **Dependency and version drift:** `requirements.txt` pins exact package versions (e.g., `streamlit==1.60.0`) rather than open-ended version ranges. This protects the deployed app from unannounced behavior or styling changes if Streamlit, Pandas, NumPy, or pydeck release a new version. The app keeps using the tested version pins unless the team deliberately upgrades and re-tests.
-* **No direct municipal data feed:** Nigeria does not currently offer a unified public API or feed of official municipal water testing results, which is part of the underlying access problem. This was mitigated by grounding the dashboard in a large public dataset plus two peer-reviewed regional case studies, so the app still reflects real-world testing data rather than synthetic figures. Future work could pursue direct partnerships with municipal water authorities (see [Future Ideas](#future-ideas)).
+* **No direct municipal data feed:** Nigeria does not currently appear to have a unified public API or automated feed of official municipal water testing results, which is part of the underlying access problem. This was mitigated by grounding the dashboard in a large public dataset plus two peer-reviewed regional case studies, so the app still reflects real-world testing data rather than synthetic figures. Future work could pursue direct partnerships with municipal water authorities (see [Future Ideas](#future-ideas)).
 
 ---
 
 <a name="future-ideas"></a>
-## 💡 Future Ideas
+## Future Ideas
 
 * Add a year-over-year trend visualization (e.g., average contaminant and bacteria levels by year) to surface long-term sanitation patterns, building on the year-tagged records already in the dataset.
 * Expand data ingestion to incorporate real-time automated IoT sensor feeds from local water treatment facilities.
@@ -394,7 +393,7 @@ streamlit run app.py
 ---
 
 <a name="license"></a>
-## 📄 License
+## License
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
